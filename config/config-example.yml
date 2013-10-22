@@ -1,0 +1,16 @@
+---
+cio_secret_key: CUSTOMER_IO_SECRET_KEY
+cio_site_id: CUSTOMER_IO_SITE_ID
+destination_email: somepeople@example.com
+destination_first_name: Some People
+do_api_key: DIGITAL_OCEAN_API_KEY
+do_client_id: DIGITAL_OCEAN_CLIENT_ID
+do_image_id: DIGITAL_OCEAN_IMAGE_ID # Thought: this could be also referenced by name
+do_name: DIGITAL_OCEAN_DROPLET_NAME
+do_region_id: DIGITAL_OCEAN_REGION
+do_size_id: DIGITAL_OCEAN_SIZE_ID
+do_ssh_key_ids:
+  - DIGITAL_OCEAN_SSH_KEY1
+  - DIGITAL_OCEAN_SSH_KEY2
+  - DIGITAL_OCEAN_SSH_KEY3
+local: false
