@@ -60,12 +60,17 @@ module JenkinsWorkerSpinner
         size_id: config.do_size_id,
         image_id: config.do_image_id,
         region_id: config.do_region_id,
-        ssh_key_ids: config.do_ssh_key_ids.join(',')
+        ssh_key_ids: ssh_key_ids
       }
     end
 
     def droplets
       @droplets ||= Digitalocean::Droplet.all.droplets
+    end
+
+    def ssh_key_ids
+      return config.do_ssh_key_ids.join(',') if config.do_ssh_key_ids.is_a?(Array)
+      config.do_ssh_key_ids
     end
 
     def droplet_id_by_name(name)
