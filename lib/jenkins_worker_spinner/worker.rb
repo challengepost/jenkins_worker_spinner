@@ -37,6 +37,10 @@ module JenkinsWorkerSpinner
       response = Digitalocean::Droplet.retrieve(worker_id)
       droplet = response.droplet
 
+      puts <<-EOF
+#{droplet.name}: #{droplet.ip_address}
+      EOF
+
       mailer.send(new_ip_address: droplet.ip_address, name: droplet.name)
     end
 
