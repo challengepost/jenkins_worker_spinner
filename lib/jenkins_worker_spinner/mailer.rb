@@ -11,7 +11,7 @@ module JenkinsWorkerSpinner
     private
 
     CIO_EMAIL_NAME = "instantiated_digital_ocean_instance"
-    CIO_CLIENT_ID = 1
+    CIO_CLIENT_ID = 102
 
     attr_reader :config
 
